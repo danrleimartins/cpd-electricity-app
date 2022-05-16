@@ -1,0 +1,10 @@
+#reset-btn {
+    display: none;
+    ;
+}
+
+#result {
+    border-collapse: collapse;
+    width: 100%;
+    display: none;
+}
