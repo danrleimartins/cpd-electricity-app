@@ -51,12 +51,6 @@ const mainMenuTemplate = [
         label: 'Menu',
         submenu: [
             {
-                label: 'Test',
-                click() {
-                    shell.openExternal('https://cointelegraph.com/bitcoin-price')
-                }
-            },
-            {
                 label: 'GitHub Repository',
                 click() {
                     shell.openExternal('https://github.com/danrleimartins/electron-btc-app')
