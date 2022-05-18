@@ -6,12 +6,14 @@ let chargeNoVat;
 let finalCharge;
 const vat = 13.5 / 100; //13.5%
 
+// Electricity Bill Calculator Function
 window.onload = function () {
     const calcBtn = document.getElementById('calculate-btn');
 
-    //
+    // Adding click event to button
     calcBtn.addEventListener('click', (event) => {
         event.preventDefault;
+        // Getting input value
         const numberOfUnits = document.getElementById('units-num').value;
 
         // Calculating Bill Without VAT
@@ -22,10 +24,9 @@ window.onload = function () {
         finalCharge = parseFloat(chargeNoVat) + (chargeNoVat * vat);
         console.log(finalCharge);
 
+        // Appending final charge result to page
         document.getElementById('principal').textContent = "€" + parseFloat(finalCharge).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
 
         document.getElementById('result').style.display = 'table';
-        //document.getElementById('reset-btn').style.display = 'block';
-
     })
 }
