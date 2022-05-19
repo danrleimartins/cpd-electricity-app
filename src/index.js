@@ -21,11 +21,11 @@ window.onload = function () {
         console.log(chargeNoVat);
 
         // Adding VAT and calculating final charge
-        finalCharge = parseFloat(chargeNoVat) + (chargeNoVat * vat);
+        finalCharge = (chargeNoVat) + (chargeNoVat * vat);
         console.log(finalCharge);
 
         // Appending final charge result to page
-        document.getElementById('principal').textContent = "€" + parseFloat(finalCharge).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
+        document.getElementById('principal').textContent = "€" + (finalCharge.toFixed(2)).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
 
         document.getElementById('result').style.display = 'table';
     })
